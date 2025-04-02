@@ -24,17 +24,25 @@
               
                 <AuthorizeView>
                     <NotAuthorized>
-                    <li class="nav-item">
-                        <NavLink class="nav-link" href="login">
-                            <span class="oi" aria-hidden="true"></span> Login
-                        </NavLink>
-                    </li>
-                    <li class="nav-item">
-                        <NavLink class="nav-link" href="register">
-                            <span class="oi" aria-hidden="true"></span> Register
-                        </NavLink>
-                    </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="login">
+                                <span class="oi" aria-hidden="true"></span> Login
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="register">
+                                <span class="oi" aria-hidden="true"></span> Register
+                            </NavLink>
+                        </li>
+                        <li class="nav-item navbar-text mx-2">
+                            You are not logged in
+                        </li>
                     </NotAuthorized>
+                    <Authorized>
+                        <li class="nav-item navbar-text mx-2">
+                            Hi, @context.User.Identity.Name
+                        </li>
+                    </Authorized>
                 </AuthorizeView>
             </ul>
         </div>
